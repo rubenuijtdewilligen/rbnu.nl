@@ -85,10 +85,12 @@
   <div class="hero-content flex w-full flex-col justify-between md:flex-row">
     <div>
       <h1 class="text-6xl font-bold">
-        Hi, ik ben <span
+        Hi, ik ben
+        <span
           class="bg-clip-textfont-bold inline-block bg-gradient-to-r from-[#44ae4e] to-[#23912d] p-4 text-white"
-          >Ruben</span
         >
+          Ruben
+        </span>
       </h1>
       <h3
         class="mt-4 inline-block bg-gradient-to-r from-[#44ae4e] to-[#23912d] bg-clip-text text-2xl font-bold text-transparent"
