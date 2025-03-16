@@ -1,5 +1,10 @@
 <script>
   import '../app.css';
+
+  import { config } from '@fortawesome/fontawesome-svg-core';
+  import '@fortawesome/fontawesome-svg-core/styles.css';
+
+  config.autoAddCss = false;
 </script>
 
 <div class="py-3">

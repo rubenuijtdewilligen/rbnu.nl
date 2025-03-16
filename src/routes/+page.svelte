@@ -1,4 +1,14 @@
 <script>
+  import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+  import { faCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+  import {
+    faFacebook,
+    faGithub,
+    faInstagram,
+    faLinkedin,
+    faSoundcloud
+  } from '@fortawesome/free-brands-svg-icons';
+
   const portfolioProjects = [
     {
       name: 'AidCone',
@@ -48,14 +58,26 @@
       link: 'https://league-fm.nl/mijn'
     }
   ];
+
+  const socialmedia = [
+    { href: 'https://linkedin.com/in/rubenuijtde', icon: faLinkedin },
+    { href: 'https://instagram.com/ruben.uijtdewilligen', icon: faInstagram },
+    { href: 'https://facebook.com/ruben.uijtdewilligen.3', icon: faFacebook },
+    { href: 'https://github.com/rubenuijtdewilligen', icon: faGithub },
+    { href: 'mailto:ruben@uijtdewilligenbv.nl', icon: faEnvelope }
+  ];
 </script>
 
 <div class="navbar bg-base-100">
   <div class="navbar-start">
-    <a href="/" class="btn btn-ghost px-0 text-xl normal-case">🟢 Ruben Uijtdewilligen </a>
+    <a href="/" class="btn btn-ghost px-0 text-xl normal-case">
+      <FontAwesomeIcon icon={faCode} class="text-[#23912d]" /> Ruben Uijtdewilligen
+    </a>
   </div>
   <div class="navbar-end">
-    <a href="mailto:ruben@uijtdewilligenbv.nl" class="btn bg-[#23912d] text-white">Contact</a>
+    <a href="mailto:ruben@uijtdewilligenbv.nl" class="btn bg-[#23912d] text-white">
+      <FontAwesomeIcon icon={faEnvelope} /> Contact
+    </a>
   </div>
 </div>
 
@@ -74,6 +96,20 @@
         <div class="text-black">jouw lokale partner voor:</div>
         web ontwikkeling | hosting | e-mail | SaaS
       </h3>
+
+      <div class="mt-4 flex flex-row space-x-3">
+        {#each socialmedia as social, index}
+          <a
+            key={index}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 transition-all duration-300 hover:bg-gray-300 hover:text-gray-900"
+          >
+            <FontAwesomeIcon icon={social.icon} size="lg" />
+          </a>
+        {/each}
+      </div>
     </div>
 
     <img src="/me.png" alt="Me" class="max-h-72" />
@@ -150,9 +186,10 @@
     {/each}
   </div>
 
-  <a href="https://github.com/rubenuijtdewilligen" class="btn btn-ghost"
-    >Zie meer op mijn GitHub pagina</a
-  >
+  <a href="https://github.com/rubenuijtdewilligen" class="btn btn-ghost">
+    <FontAwesomeIcon icon={faGithub} />
+    Zie meer op mijn GitHub pagina
+  </a>
 </div>
 
 <div class="divider"></div>
@@ -169,6 +206,7 @@
 
   <div class="flex items-center">
     <a href="mailto:ruben@uijtdewilligenbv.nl" class="btn-[#093569] btn mt-2 md:mt-0">
+      <FontAwesomeIcon icon={faEnvelope} />
       Stuur me een e-mail!
     </a>
   </div>
