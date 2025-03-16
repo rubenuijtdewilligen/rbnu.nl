@@ -47,7 +47,7 @@
       image: '/projects/ehboverenigingroosendaal.png',
       description:
         'De digitalisering van EHBO vereniging Roosendaal heb ik in een team van 2 uitgevoerd. Hieronder vielen de website, de huisstijl en het ledensysteem dat is uitgegroeid tot mijn huidige SaaS project AidCone.',
-      link: 'https://belgischemotorenmuseum.com'
+      link: 'https://ehboroosendaal.nl'
     },
 
     {
@@ -181,7 +181,7 @@
             {project.description}
           </p>
           <div class="card-actions justify-end">
-            <button class="btn bg-[#23912d] text-white">Bekijk project</button>
+            <a class="btn bg-[#23912d] text-white" href={project.link}>Bekijk project</a>
           </div>
         </div>
       </div>
